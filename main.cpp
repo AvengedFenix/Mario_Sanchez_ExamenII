@@ -20,7 +20,7 @@ vector<string> readfile(vector<string> v){
     if (File.is_open()) {
         while (!File.eof()) {
             File >> output;
-            //cout<<output;
+            cout<<output;
         }//fin while
         string s;
         /*if (!getline( File, s )) {
@@ -41,12 +41,13 @@ vector<string> readfile(vector<string> v){
                   File.getline(output, 256, ';');
                   v.push_back(output);
           }*/
+
           while(std::getline(File, s)) {
           std::stringstream linestream(s);
           std::string data;
           int val1;
           int val2;
-          std::getline(linestream, data, ';');
+          std::getline(linestream, data, '\n');
           v.push_back(linestream.str());
       }
    }//fin if
@@ -75,19 +76,19 @@ int main(int argc, char const *argv[]) {
         a[8] = new Circulo(15,15,"Ciruclo4");
         a[9] = new Circulo(10,10,"Circulo5");
         for (int i = 0; i < 10; i++) {
-          ss << a[i]->toString() << " " << "Area: " << a[i]->getArea() << "; ";
+          ss << a[i]->toString() << " " << "Area: " << a[i]->getArea() << "; " << endl;
         }//fin for
         ofstream outfile;
         char filename[256] = {0};
         strcpy(filename, "./Figuras.log");
         outfile.open(filename, std::ios::app);
-        outfile << ss.str();
+        outfile << ss.str() << endl;
         outfile.close();
         for (int i = 0; i < 10; i++) {
             delete a[i];
         }
-        //delete a;
-        std::cout << "Imagenes guardadas y destruidas de RAM con exito" << endl;
+        //delete[] a;
+        std::cout << "Figuras guardadas y destruidas de RAM con exito" << endl;
         break;
       }//fin case 1
       case 2:{
@@ -118,8 +119,8 @@ int main(int argc, char const *argv[]) {
       case 3:{
           vector<string> v;
           readfile(v);
-          std::cout << "Cargado con exito" << endl;
-          std::cout << "Size: " << v.size() << endl;
+          std::cout << "\nCargado con exito" << endl;
+         // std::cout << "Size: " << v.size() << endl;
           for (int i = 0; i < v.size(); i++) {
               std::cout << v[i] << endl;
           }

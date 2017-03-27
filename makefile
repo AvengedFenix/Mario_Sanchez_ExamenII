@@ -15,3 +15,6 @@ Figura.o:	Figura.cpp Figura.h Cuadrado.h Circulo.h
 
 Double.o: Double.cpp Double.h
 		g++ -c Double.cpp
+
+clean:
+		rm *.o Examen
