@@ -1,6 +1,6 @@
 #include "Figura.h"
 
-class Cuadrado {
+class Cuadrado : public Figura{
 private:
 
 

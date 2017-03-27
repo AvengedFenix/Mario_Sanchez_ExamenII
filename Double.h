@@ -1,13 +1,13 @@
 #pragma once
 
 class Double {
-private:
-  Double d;
+public:
+  double d;
 
 public:
   Double ();
-  Double (Double*);
-  Double operator+(Double*, Double*);
-  Double operator-(Double*, Double*);
+  Double (double);
+  double operator+(Double*);
+  double operator-(Double*);
   virtual ~Double ();
 };

@@ -4,18 +4,18 @@ Double::Double(){
 
 }
 
-Double::Double(Double* d){
-
+Double::Double(double d){
+    this->d = d;
 }
 
-Double Double::operator+(Double* d, Double* c){
-  return d+c;
+double Double::operator+(Double* c){
+  return d+c->d;
 }
 
-Double Double::operator-(Double* d, Double* c){
-  return d-c;
+double Double::operator-(Double* c){
+  return d-c->d;
 }
 
 Double::~Double(){
-  
+
 }

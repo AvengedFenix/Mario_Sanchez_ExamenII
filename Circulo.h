@@ -2,15 +2,15 @@
 #include "Figura.h"
 
 
-class Ciruclo {
+class Circulo : public Figura{
 private:
 
 
 public:
-  Ciruclo();
+  Circulo();
 
-  Ciculo(int,int,string);
+  Circulo(int,int,string);
   virtual double getArea();
   virtual string toString();
-  virtual ~Ciruclo ();
+  virtual ~Circulo ();
 };

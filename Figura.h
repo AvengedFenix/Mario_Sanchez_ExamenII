@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+using namespace std;
 
 class Figura {
 protected:
@@ -10,7 +11,7 @@ protected:
 
 public:
   Figura ();
-  FIgura(x,y, string);
+  Figura(int,int, string);
   virtual string toString() = 0;
   virtual double getArea() = 0;
   virtual ~Figura ();

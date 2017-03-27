@@ -14,3 +14,4 @@ Figura.o:	Figura.cpp Figura.h Cuadrado.h Circulo.h
 		g++ -c Figura.cpp
 
 Double.o: Double.cpp Double.h
+		g++ -c Double.cpp

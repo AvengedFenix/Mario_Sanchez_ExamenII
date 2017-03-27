@@ -10,9 +10,13 @@ Figura::Figura(int x,int y, string nombre){
   this->nombre = nombre;
 }
 
-Figura::getArea();
+double Figura::getArea(){
 
-Figura::toString();
+}
+
+string Figura::toString(){
+    
+}
 
 Figura::~Figura(){
 

@@ -4,7 +4,7 @@ Cuadrado::Cuadrado(){
 
 }
 
-Cuadrado::Cuadrado(int x,int y, string nombre) : Figura(x,y,string){
+Cuadrado::Cuadrado(int x,int y, string nombre) : Figura(x,y,nombre){
   this->x =x;
   this->y =y;
   this->area = x*y;
@@ -12,13 +12,13 @@ Cuadrado::Cuadrado(int x,int y, string nombre) : Figura(x,y,string){
 }
 
 string Cuadrado::toString(){
-  return area;
+  return nombre;
 }
 
 double Cuadrado::getArea(){
-  return area;
+  return this->area;
 }
 
 Cuadrado::~Cuadrado(){
-  
+
 }
